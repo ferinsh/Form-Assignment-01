@@ -13,16 +13,15 @@
 
         html, body {
             height: 100%;
+            margin: 0;
         }
 
         body {
             background: black;
-            margin: 0;
         }
 
         .container {
             display: flex;
-            flex-direction: column;
             width: 100%;
             margin: auto;
             background-image: url('./images/background.jpg');
@@ -33,11 +32,11 @@
         }
 
         .container-left {
-            width: 100%;
+            width: 40%;
         }
 
         .container-right {
-            width: 100%;
+            width: 60%;
             background: white;
         }
 
@@ -45,17 +44,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 100px;
+            margin-top: 300px;
             background-color: rgba(0, 0, 0, 0.5);
             font-family: var(--default-font);
             color: white;
-            height: 80px;
+            height: 100px;
         }
 
         #para {
             margin-left: 5%;
-            margin-right: 5%;
-            margin-top: 50px;
+            margin-right: 25%;
+            margin-top: 100px;
             font-family: var(--default-font);
             font-weight: 700;
             font-size: 15px;
@@ -65,38 +64,107 @@
         .form-container {
             background: white;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
-            padding: 5%;
+            padding-left: 5%;
             font-family: var(--default-font);
             font-weight: 600;
             color: rgba(0, 0, 0, 0.5);
         }
 
-        #btn-create-account {
+        #form-heading {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .form-row {
+            display: flex;
+            margin-bottom: 5px;
+        }
+
+        .form-col {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            margin-right: 50px;
+        }
+
+        .form-col:last-child {
+            margin-right: 0;
+        }
+
+        .form-col label {
+            margin-bottom: 5px;
+            font-size: 10px;
+        }
+
+        .form-col input {
             width: 100%;
+        }
+
+        .form-container input {
+            border-radius: 5px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        #btn-create-account {
+            background: seagreen;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: var(--default-font);
+            font-size: 15px;
+            font-weight: 600;
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            border: 0px;
+            margin-left: 5%;
             margin-top: 20px;
         }
 
-        @media (min-width: 768px) {
-            /* Adjustments for larger screens if needed */
+        #btn-create-account:hover {
+            background: darkolivegreen;
+        }
+
+        #login-instead {
+            margin-left: 5%;
+            margin-top: 25px;
+            font-family: var(--default-font);
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        #login-instead a {
+            color: seagreen;
+            text-decoration: none;
+        }
+
+        #login-instead a:hover {
+            color: darkolivegreen;
+        }
+
+        @media (max-width: 767px) {
             .container {
-                flex-direction: row;
+                flex-direction: column;
             }
 
-            .container-left {
-                width: 35%;
-            }
-
-            .container-right {
-                width: 65%;
+            .container-left, .container-right {
+                width: 100%;
             }
 
             #heading {
-                height: 100px;
+                margin-top: 100px;
             }
 
             #para {
-                font-size: 18px;
-                margin-top: 100px;
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 30px;
+                font-size: 15px;
+            }
+
+            .form-container {
+                padding: 3%;
+            }
+
+            #btn-create-account {
+                margin-top: 15px;
             }
         }
     </style>
@@ -109,9 +177,9 @@
         </div>
         <div class="container-right">
             <div class="para">
-                <p id="para">This is not a real online service! You know you need something like this in your life
-                    to help you realize your deepest dreams. Sign up <i>now</i> to get started.<br><br>You <i>know</i>
-                    you want to.<br><br></p>
+                <p id="para">This is not a real online service! You know you need something like this in your life to
+                    help you realize your deepest dreams. Sign up <i>now</i> to get started.<br><br>You <i>know</i> you
+                    want to.<br><br></p>
             </div>
 
             <!--FORM-->
@@ -135,13 +203,12 @@
                         <div class="form-row">
                             <div class="form-col">
                                 <label for="email">EMAIL</label>
-                                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com"
-                                    required>
+                                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
                             </div>
                             <div class="form-col">
                                 <label for="phone-number">PHONE NUMBER</label>
-                                <input type="tel" id="phone-number" name="phone-number"
-                                    placeholder="With country code" required>
+                                <input type="tel" id="phone-number" name="phone-number" placeholder="With country code"
+                                    required>
                             </div>
                         </div>
 
@@ -156,9 +223,10 @@
                             </div>
                         </div>
 
-                    </form>
+                    
                     <button type="submit" id="btn-create-account">Create Account</button>
                     <button type="reset" id="btn-create-account">RESET</button>
+                    </form>
                     <div id="login-instead">
                         <para>Already have an account? <a href="#">Log in</a></para>
                     </div>
