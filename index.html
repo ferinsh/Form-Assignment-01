@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-left">
+            <h1 id="heading">FORMS ASSIGNMENT</h1>
+        </div>
+        <div class="container-right">
+            <div class="para">
+                <p id="para">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.<br><br>You <i>know</i> you want to.<br><br></p>
+            </div>
+
+
+            <!--FORM-->
+            
+            <div class="account-box">
+            <div class="form-container">
+            <form>    
+                <h2 id="form-heading">Let's do this!</h2>
+            
+                <div class="form-row">
+                  <div class="form-col">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="second-name">SECOND NAME</label>
+                    <input type="text" id="second-name" name="second-name" placeholder="Doe" required>
+                  </div>
+                </div>
+            
+                <div class="form-row">
+                  <div class="form-col">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="phone-number">PHONE NUMBER</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="With country code" required>
+                  </div>
+                </div>
+            
+                <div class="form-row">
+                  <div class="form-col">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required>
+                  </div>
+                  <div class="form-col">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                  </div>
+                </div>
+            
+                
+              </div>
+              <button type="submit" id="btn-create-account">Create Account</button>
+              <button type="reset" id="btn-create-account">RESET</button>
+            </form>
+              <div id="login-instead">
+                <para>Already have an account? <a href="#">Log in</a></para>
+              </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
