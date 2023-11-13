@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
+    <style>
+        :root {
+            --default-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: black;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: auto;
+            background-image: url('./images/background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+        }
+
+        .container-left {
+            width: 100%;
+        }
+
+        .container-right {
+            width: 100%;
+            background: white;
+        }
+
+        #heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-family: var(--default-font);
+            color: white;
+            height: 80px;
+        }
+
+        #para {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 50px;
+            font-family: var(--default-font);
+            font-weight: 700;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .form-container {
+            background: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
+            padding: 5%;
+            font-family: var(--default-font);
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        #btn-create-account {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            /* Adjustments for larger screens if needed */
+            .container {
+                flex-direction: row;
+            }
+
+            .container-left {
+                width: 35%;
+            }
+
+            .container-right {
+                width: 65%;
+            }
+
+            #heading {
+                height: 100px;
+            }
+
+            #para {
+                font-size: 18px;
+                margin-top: 100px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="container-left">
@@ -13,61 +109,64 @@
         </div>
         <div class="container-right">
             <div class="para">
-                <p id="para">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.<br><br>You <i>know</i> you want to.<br><br></p>
+                <p id="para">This is not a real online service! You know you need something like this in your life
+                    to help you realize your deepest dreams. Sign up <i>now</i> to get started.<br><br>You <i>know</i>
+                    you want to.<br><br></p>
             </div>
-
 
             <!--FORM-->
-            
-            <div class="account-box">
-            <div class="form-container">
-            <form>    
-                <h2 id="form-heading">Let's do this!</h2>
-            
-                <div class="form-row">
-                  <div class="form-col">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="John" required>
-                  </div>
-                  <div class="form-col">
-                    <label for="second-name">SECOND NAME</label>
-                    <input type="text" id="second-name" name="second-name" placeholder="Doe" required>
-                  </div>
-                </div>
-            
-                <div class="form-row">
-                  <div class="form-col">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
-                  </div>
-                  <div class="form-col">
-                    <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" id="phone-number" name="phone-number" placeholder="With country code" required>
-                  </div>
-                </div>
-            
-                <div class="form-row">
-                  <div class="form-col">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" required>
-                  </div>
-                  <div class="form-col">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                  </div>
-                </div>
-            
-                
-              </div>
-              <button type="submit" id="btn-create-account">Create Account</button>
-              <button type="reset" id="btn-create-account">RESET</button>
-            </form>
-              <div id="login-instead">
-                <para>Already have an account? <a href="#">Log in</a></para>
-              </div>
-            </div>
 
+            <div class="account-box">
+                <div class="form-container">
+                    <form>
+                        <h2 id="form-heading">Let's do this!</h2>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="first-name">FIRST NAME</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="second-name">SECOND NAME</label>
+                                <input type="text" id="second-name" name="second-name" placeholder="Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com"
+                                    required>
+                            </div>
+                            <div class="form-col">
+                                <label for="phone-number">PHONE NUMBER</label>
+                                <input type="tel" id="phone-number" name="phone-number"
+                                    placeholder="With country code" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="password">PASSWORD</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="confirm-password">CONFIRM PASSWORD</label>
+                                <input type="password" id="confirm-password" name="confirm-password" required>
+                            </div>
+                        </div>
+
+                    </form>
+                    <button type="submit" id="btn-create-account">Create Account</button>
+                    <button type="reset" id="btn-create-account">RESET</button>
+                    <div id="login-instead">
+                        <para>Already have an account? <a href="#">Log in</a></para>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
+
 </html>
